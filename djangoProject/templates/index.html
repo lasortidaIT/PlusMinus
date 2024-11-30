@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math App</title>
+    <link rel="stylesheet" href="{%  static "main.css" %}">
+    <script src="{%  static "script.js" %}" defer></script>
+</head>
+<body>
+    <div class="content">
+       <div class="title">
+           <h1>Solve this problem:</h1>
+       </div> 
+        <div class="problem">
+            <h2 id="problem">{{ problem }}</h2>
+        </div>
+        <div class="answer">
+            <input type="text" id="box">
+            <div class="but">
+                <a href="#" id="button" onclick="onClick()">Check</a>
+            </div>
+            <div class="result">
+                <h2 id="result">Your result</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
