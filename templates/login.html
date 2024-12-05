@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%  static "css/login.css" %}">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="content">
+        <div class="top-panel">
+        <a href="./main-game">
+            <button>
+                <img src="{%  static "img/close.svg" %}" alt="cancel">
+            </button>
+        </a>
+        </div>
+        <div class="login-area">
+            <h1>Log In</h1>
+            <div class="login-panel">
+                <input type="text" placeholder="username" maxlength="30">
+                <input type="password" placeholder="password">
+                <div class="social-auth">
+                    <h3>Use:</h3>
+                    <button class="google">
+                        <img src="{%  static "img/google.svg" %}" alt="google">
+                        <label>Google</label>
+                    </button>
+                </div>
+            </div>
+            <button>Log In</button>
+        </div>
+        <div class="bottom-panel">
+            <a href="./signup"><button>I don't have an account</button></a>
+        </div>
+    </div>
+</body>
+</html>

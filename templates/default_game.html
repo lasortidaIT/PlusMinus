@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{%  static "css/navbar.css" %}">
+    <link rel="stylesheet" href="{%  static "css/game.css" %}">
+    <link rel="stylesheet" href="{%  static "css/settings.css" %}">
+    <link rel="stylesheet" href="{%  static "css/default_game.css" %}">
+    <title>MainGame</title>
+</head>
+<body>
+    <div class="navbar-container">
+        <h1>+/-PlusMinus</h1>
+        <div class="button-container">
+            <a href=""><button class="navbutton active">main game</button></a>
+            <a href="./problem-day"><button class="navbutton">problem of day</button></a>
+            <a href="#/"><button class="navbutton">statistics</button></a>
+        </div>
+        <div class="auth">
+            <a href="./login"><button class="login">Log In</button></a>
+            <a href="./signup"><button class="signup">Sign Up</button></a>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="window-problem">
+            <h2>21 + 0</h2>
+        </div>
+        <div class="action-panel">
+            <input id="problem-answer" class="input-problem" type="number" placeholder="answer">
+            <button>GO</button>
+        </div>
+        <div class="dummy">
+            <div class="result-panel">
+                <h2>your answer is right</h2>
+            </div>
+        </div>
+    </div>
+    <div class="settings-container">
+        <h1>set up your game</h1>
+        <div class="settings-panel">
+            <div class="number-area">
+                <h3>number area</h3>
+                <div class="number-checkbox">
+                    <input id="easy" type="checkbox" >
+                    <input id="normal" type="checkbox">
+                    <input id="hard" type="checkbox">
+                </div>
+            </div>
+            <div class="sign-area">
+                <h3>sign (random)</h3>
+                <div class="sign-checkbox">
+                    <input id="plus" type="checkbox" >
+                    <input id="minus" type="checkbox">
+                    <input id="multiply" type="checkbox">
+                    <input id="division" type="checkbox">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

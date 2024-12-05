@@ -1,0 +1,88 @@
+.navbar-container {
+   align-self: flex-start;
+   width: 20vw;
+   height: 98vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   border-right: #512f25 solid 0.5vw;
+}
+
+.navbar-container h1 {
+   font-size: 2.5vw;
+   font-weight: bold;
+   margin-top: 4vh;
+   text-align: center;
+}
+
+.button-container {
+   width: 18vw;
+   height: 25vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+
+.button-container button {
+   background: #e7c27c;
+   font-family: "JetBrains Mono", monospace;
+   font-size: 2vw;
+   border: solid #512f25 0.2vw;
+   border-radius: 10vw;
+   height: 6vh;
+   width: 18vw;
+}
+
+.button-container button:hover {
+   background: #d8843c;
+}
+
+.button-container .active {
+   background: #3d4a36;
+   font-family: "JetBrains Mono", monospace;
+   font-size: 2vw;
+   color: #fff;
+   border-radius: 10vw;
+   border: none;
+   height: 6vh;
+}
+
+.auth {
+   height: 6vh;
+   width: 17vw;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 4vh;
+}
+
+.auth button {
+   height: 6vh;
+   width: 8vw;
+   font-size: 1.5vw;
+   font-family: "JetBrains Mono", monospace;
+}
+
+.auth .login {
+   background: #e7c27c;
+   color: #000;
+   border: none;
+}
+
+.auth .login:hover {
+   background: #6a7334;
+   color: #fff;
+   border: none;
+   border-radius: 5vw;
+}
+
+.auth .signup {
+   background: #3d4a36;
+   color: #fff;
+   border: none;
+   border-radius: 5vw;
+}
+
+.auth .signup:hover {
+   background: #6a7334;
+}

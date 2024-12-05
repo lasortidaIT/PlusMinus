@@ -1,0 +1,6 @@
+body {
+   background: #e7c27c;
+   display: flex;
+   font-family: "JetBrains Mono", monospace;
+   flex-direction: row;
+}

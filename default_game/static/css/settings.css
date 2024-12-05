@@ -1,0 +1,22 @@
+.settings-container {
+    width: 38vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-container h1 {
+    font-size: 2.5vw;
+}
+
+.settings-panel {
+    width: 28vw;
+    height: 40vh;
+    border: solid 0.1vw #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

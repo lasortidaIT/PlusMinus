@@ -1,0 +1,169 @@
+body {
+    height: 98vh;
+    width: 98vw;
+    background: #e7c27c;
+    font-family: "JetBrains Mono", monospace;
+    margin: 0 auto;
+}
+
+.content {
+    height: 98vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.top-panel {
+    width: 98vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top-panel button {
+    width: 3vw;
+    height: 3vw;
+    background: #e7c27c;
+    border: none;
+    border-radius: 10vw;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-panel button:hover {
+    background: #888;
+    opacity: 0.4;
+}
+
+.top-panel img {
+    width: 3vw;
+    height: 3vw;
+}
+
+.login-area {
+    width: 98vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-area h1 {
+    font-size: 2.5vw;
+}
+
+.login-panel {
+    width: 30vw;
+    height: 38vh;
+    background: #3d4a36;
+    border-radius: 2.5vw;
+    border: #000 solid 0.2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.login-panel input {
+    background: #fff;
+    border: #000 solid 0.1vw;
+    border-radius: 4vw;
+    width: 25vw;
+    height: 5vh;
+    margin-bottom: 2vh;
+    font-family: monospace;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.social-auth {
+    background: #3d4a36;
+    width: 20vw;
+    height: 10vh;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-auth h3 {
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.social-auth .google {
+    width: 10vw;
+    height: 7vh;
+    background: #3d4a36;
+    border: #fff solid 0.15vw;
+    border-radius: 4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.social-auth .google img {
+    width: 3vw;
+    height: 3vw;
+}
+
+.social-auth .google label {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.login-area button {
+    height: 6vh;
+    width: 27vw;
+    margin-top: 2vh;
+    background: #512f25;
+    border: none;
+    border-radius: 5vw;
+    color: #fff;
+    font-size: 1.5vw;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.login-area button:hover {
+    background: #d8843c;
+}
+
+.bottom-panel {
+    width: 98vw;
+    height: 10vh;
+    background: #e7c27c;
+    justify-self: end;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.bottom-panel button {
+    margin-right: 2vw;
+    width: 21vw;
+    height: 7vh;
+    font-size: 1.5vw;
+    color: #000;
+    font-family: monospace;
+    border: none;
+    background: #e7c27c;
+    font-weight: bold;
+    border-radius: 5vw;
+}
+
+.bottom-panel button:hover {
+    background: #888;
+    opacity: 0.4;
+}
