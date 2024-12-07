@@ -13,10 +13,188 @@
 
 .settings-panel {
     width: 28vw;
-    height: 40vh;
-    border: solid 0.1vw #000;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.number-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 28vw;
+    height: 11vh;
+}
+
+.number-area h3 {
+    font-size: 1.2vw;
+}
+
+.number-checkbox {
+    display: flex;
+    flex-direction: row;
+    width: 15vw;
+    height: 5vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option {
+    width: 4vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option .in {
+    border: none;
+    clip: rect(0 0 0 0);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option label {
+    font-size: 1vw;
+    width: 4vw;
+    border: 0.1vw solid #000;
+    border-radius: 1vw;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+input:checked + label {
+    background: #3d4a36;
+    color: #fff;
+}
+
+.negative-area {
+    width: 14vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.negative-area h3 {
+    font-size: 1.2vw;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4vw;
+    height: 3.4vh;
+}
+
+/* Hide default checkbox */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 3vw;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s;
+}
+
+/* The circular slider */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 2.4vh;
+    width: 2.4vh;
+    margin-top: 0.5vh;
+    margin-left: 0.5vw;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Toggled state */
+.toggle-switch input:checked+.slider {
+    background-color: #4caf50;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(1.7vw);
+}
+
+.sign-area {
+    width: 27vw;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-area h3 {
+    font-size: 1.2vw;
+}
+
+.sign-checkbox {
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-area {
+    width: 27vw;
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-area h3 {
+    font-size: 1.2vw;
+}
+
+.amount-checkbox {
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start-button {
+    background: #512f25;
+    border: solid #000 0.15vw;
+    border-radius: 5vw;
+    width: 12vw;
+    height: 7vh;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 2vw;
+    margin-top: 8vh;
+    color: #fff;
+}
+
+.start-button:hover {
+    background: #d8843c;
 }

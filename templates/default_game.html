@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{%  static "css/game.css" %}">
     <link rel="stylesheet" href="{%  static "css/settings.css" %}">
     <link rel="stylesheet" href="{%  static "css/default_game.css" %}">
+    <script src="{%  static "js/game.js" %}"></script>
+{#    <link rel="stylesheet" href="{%  static "css/toggle-button.css" %}">#}
     <title>MainGame</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
         <h1>+/-PlusMinus</h1>
         <div class="button-container">
             <a href=""><button class="navbutton active">main game</button></a>
-            <a href="./problem-day"><button class="navbutton">problem of day</button></a>
+            <a href="./problem-day"><button class="navbutton">day problem</button></a>
             <a href="#/"><button class="navbutton">statistics</button></a>
         </div>
         <div class="auth">
@@ -26,15 +28,15 @@
     </div>
     <div class="game-container">
         <div class="window-problem">
-            <h2>21 + 0</h2>
+            <h2 id="problem"></h2>
         </div>
         <div class="action-panel">
             <input id="problem-answer" class="input-problem" type="number" placeholder="answer">
-            <button>GO</button>
+            <button onclick="reader()">GO</button>
         </div>
         <div class="dummy">
-            <div class="result-panel">
-                <h2>your answer is right</h2>
+            <div class="result-panel" id="resultPanel">
+                <h2 id="result">your answer is right</h2>
             </div>
         </div>
     </div>
@@ -44,21 +46,72 @@
             <div class="number-area">
                 <h3>number area</h3>
                 <div class="number-checkbox">
-                    <input id="easy" type="checkbox" >
-                    <input id="normal" type="checkbox">
-                    <input id="hard" type="checkbox">
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="range-easy" name="wpuf_post_tags[]" value="10">
+                        <label for="range-easy">< 10</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="range-normal" name="wpuf_post_tags[]" value="100">
+                        <label for="range-normal">< 100</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="range-hard" name="wpuf_post_tags[]" value="1000">
+                        <label for="range-hard">< 1000</label>
+                    </div>
                 </div>
+            </div>
+            <div class="negative-area">
+                <h3>allow negative</h3>
+                <label class="toggle-switch">
+                    <input id="switch" type="checkbox"/>
+                    <span class="slider"></span>
+                </label>
             </div>
             <div class="sign-area">
                 <h3>sign (random)</h3>
                 <div class="sign-checkbox">
-                    <input id="plus" type="checkbox" >
-                    <input id="minus" type="checkbox">
-                    <input id="multiply" type="checkbox">
-                    <input id="division" type="checkbox">
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="sign+" name="wpuf_post_tags[]" value="+">
+                        <label for="sign+">+</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="sign-" name="wpuf_post_tags[]" value="-">
+                        <label for="sign-">-</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="sign*" name="wpuf_post_tags[]" value="*">
+                        <label for="sign*">⋅</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="sign/" name="wpuf_post_tags[]" value="/">
+                        <label for="sign/">∶</label>
+                    </div>
+                </div>
+            </div>
+            <div class="amount-area">
+                <h3>amount</h3>
+                <div class="amount-checkbox">
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="inf" name="wpuf_post_tags[]" value="0">
+                        <label for="inf">inf</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="five" name="wpuf_post_tags[]" value="5">
+                        <label for="five">5</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="ten" name="wpuf_post_tags[]" value="10">
+                        <label for="ten">10</label>
+                    </div>
+                    <div class="option">
+                        <input class="in new-post-tags" type="checkbox" id="fiveteen" name="wpuf_post_tags[]" value="15">
+                        <label for="fiveteen">15</label>
+                    </div>
                 </div>
             </div>
         </div>
+        <button class="start-button" onclick="start()">START</button>
     </div>
+
 </body>
 </html>
