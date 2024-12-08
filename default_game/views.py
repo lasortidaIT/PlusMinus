@@ -13,7 +13,6 @@ def default_game_index(request):
         amount = int(request.POST.get("amount"))
         generator = Generator(rang=(0, max_number), negative=negative, signs=sign, infi=infi, amount=amount)
         content = generator.main()
-        print(content)
         return JsonResponse({'content': content})
     else:
         return render(request, 'default_game.html')

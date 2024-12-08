@@ -1,7 +1,15 @@
 body {
-   background: #e7c27c;
-   display: flex;
-   flex-direction: row;
-   font-family: "JetBrains Mono", monospace;
-   justify-content: space-between;
+    background: #e7c27c;
+    display: flex;
+    flex-direction: row;
+    font-family: "JetBrains Mono", monospace;
+    justify-content: end;
+    align-items: center;
+}
+
+div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

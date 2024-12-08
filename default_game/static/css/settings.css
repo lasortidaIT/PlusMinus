@@ -69,11 +69,17 @@
     text-align: center;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    transition: background 0.3s;
+}
+
+input:hover + label {
+    cursor: pointer;
 }
 
 input:checked + label {
     background: #3d4a36;
     color: #fff;
+    transition: background 0.3s;
 }
 
 .negative-area {
@@ -136,7 +142,7 @@ input:checked + label {
 }
 
 .toggle-switch input:checked+.slider::before {
-    transform: translateX(1.7vw);
+    transform: translateX(1.45vw);
 }
 
 .sign-area {
@@ -196,5 +202,6 @@ input:checked + label {
 }
 
 .start-button:hover {
+    cursor: pointer;
     background: #d8843c;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{%  static "css/game.css" %}">
     <link rel="stylesheet" href="{%  static "css/settings.css" %}">
     <link rel="stylesheet" href="{%  static "css/default_game.css" %}">
-    <script src="{%  static "js/game.js" %}"></script>
+    <script src="{%  static "js/settings.js" %}"></script>
 {#    <link rel="stylesheet" href="{%  static "css/toggle-button.css" %}">#}
     <title>MainGame</title>
 </head>
@@ -32,7 +32,8 @@
         </div>
         <div class="action-panel">
             <input id="problem-answer" class="input-problem" type="number" placeholder="answer">
-            <button onclick="reader()">GO</button>
+            <button onclick="go()">GO</button>
+            <h2 id="hint">incorrect</h2>
         </div>
         <div class="dummy">
             <div class="result-panel" id="resultPanel">
@@ -47,15 +48,15 @@
                 <h3>number area</h3>
                 <div class="number-checkbox">
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="range-easy" name="wpuf_post_tags[]" value="10">
+                        <input onclick="numberClick(0)" class="in new-post-tags" type="checkbox" id="range-easy" name="wpuf_post_tags[]" value="10">
                         <label for="range-easy">< 10</label>
                     </div>
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="range-normal" name="wpuf_post_tags[]" value="100">
+                        <input onclick="numberClick(1)" class="in new-post-tags" type="checkbox" id="range-normal" name="wpuf_post_tags[]" value="100">
                         <label for="range-normal">< 100</label>
                     </div>
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="range-hard" name="wpuf_post_tags[]" value="1000">
+                        <input onclick="numberClick(2)" class="in new-post-tags" type="checkbox" id="range-hard" name="wpuf_post_tags[]" value="1000">
                         <label for="range-hard">< 1000</label>
                     </div>
                 </div>
@@ -68,7 +69,7 @@
                 </label>
             </div>
             <div class="sign-area">
-                <h3>sign (random)</h3>
+                <h3>sign (all)</h3>
                 <div class="sign-checkbox">
                     <div class="option">
                         <input class="in new-post-tags" type="checkbox" id="sign+" name="wpuf_post_tags[]" value="+">
@@ -92,25 +93,25 @@
                 <h3>amount</h3>
                 <div class="amount-checkbox">
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="inf" name="wpuf_post_tags[]" value="0">
+                        <input onclick="amountClick(0)" class="in new-post-tags" type="checkbox" id="inf" name="wpuf_post_tags[]" value="0">
                         <label for="inf">inf</label>
                     </div>
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="five" name="wpuf_post_tags[]" value="5">
+                        <input onclick="amountClick(1)" class="in new-post-tags" type="checkbox" id="five" name="wpuf_post_tags[]" value="5">
                         <label for="five">5</label>
                     </div>
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="ten" name="wpuf_post_tags[]" value="10">
+                        <input onclick="amountClick(2)" class="in new-post-tags" type="checkbox" id="ten" name="wpuf_post_tags[]" value="10">
                         <label for="ten">10</label>
                     </div>
                     <div class="option">
-                        <input class="in new-post-tags" type="checkbox" id="fiveteen" name="wpuf_post_tags[]" value="15">
+                        <input onclick="amountClick(3)" class="in new-post-tags" type="checkbox" id="fiveteen" name="wpuf_post_tags[]" value="15">
                         <label for="fiveteen">15</label>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="start-button" onclick="start()">START</button>
+        <button class="start-button" onclick="startGame()">START</button>
     </div>
 
 </body>

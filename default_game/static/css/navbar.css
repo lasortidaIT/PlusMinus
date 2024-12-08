@@ -7,6 +7,8 @@
    align-items: center;
    justify-content: space-between;
    border-right: #512f25 solid 0.5vw;
+   justify-self: start;
+   margin-right: auto;
 }
 
 .navbar-container h1 {
@@ -35,6 +37,7 @@
 }
 
 .button-container button:hover {
+   cursor: pointer;
    background: #d8843c;
 }
 
@@ -70,6 +73,7 @@
 }
 
 .auth .login:hover {
+   cursor: pointer;
    background: #6a7334;
    color: #fff;
    border: none;
@@ -84,5 +88,6 @@
 }
 
 .auth .signup:hover {
+   cursor: pointer;
    background: #6a7334;
 }

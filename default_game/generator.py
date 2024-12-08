@@ -2,6 +2,7 @@ import random
 #num = random.choice([i for i in range(self.n) if i != 0])
 class Generator:
     def __init__(self, rang=(1,999), negative=True, signs=('+', '-', '/', '*'), amount=9999, infi=True):
+        print(signs)
         self.n = negative
         if not self.n:
             self.rang = rang

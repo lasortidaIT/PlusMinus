@@ -18,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 27vh;
 }
 
 .window-problem h2 {
@@ -59,19 +60,32 @@
 }
 
 .action-panel button:hover {
+    cursor: pointer;
     background: #d8843c;
 }
 
+.action-panel h2 {
+    font-size: 1.5vw;
+    margin-left: 4vw;
+    background: #ff6666;
+    /*background: #6bdb6b;*/
+    border-radius: 0.6vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: #000;
+}
+
 .dummy {
-    margin-top: 5vh;
     width: 30vw;
-    height: 10vh;
+    height: 35vh;
+    justify-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 3vh;
+    overflow-y: auto;
 }
 
 .result-panel {
-    visibility: visible;
     width: 30vw;
-    height: 10vh;
     display: flex;
     align-items: end;
     justify-content: center;
