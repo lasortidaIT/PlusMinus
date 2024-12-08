@@ -76,16 +76,29 @@
 }
 
 .dummy {
-    width: 30vw;
+    width: 28vw;
     height: 35vh;
     justify-self: flex-end;
     margin-top: auto;
     margin-bottom: 3vh;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #512f25 #f8d38e;
+}
+
+.dummy::-webkit-scrollbar {
+  width: 0.5vw;               /* ширина scrollbar */
+}
+.dummy::-webkit-scrollbar-track {
+  background: #f8d38e;        /* цвет дорожки */
+}
+.dummy::-webkit-scrollbar-thumb {
+  background-color: #512f25;    /* цвет плашки */
+  border-radius: 2vw;       /* закругления плашки */ /* padding вокруг плашки */
 }
 
 .result-panel {
-    width: 30vw;
+    width: 26vw;
     display: flex;
     align-items: end;
     justify-content: center;
