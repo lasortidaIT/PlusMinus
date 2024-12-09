@@ -266,19 +266,21 @@ function startGame() {
 function go() {
     if (problemUI.content.length === 1) {
         let text = problemUI.getInputText();
-        problemUI.checkAnswer(text);
-        if (problemUI.incorrect.length === 0) {
-            hint.style.background = '#6bdb6b';
-            hint.innerText = 'correct';
-            problemUI.resultPanel.style.visibility = 'hidden';
-        } else {
-            hint.style.background = '#ff6666';
-            hint.innerText = 'incorrect';
-            problemUI.resultText.innerText = problemUI.incorrect.join('');
-            problemUI.resultPanel.style.visibility = 'visible';
+        if (text !== '') {
+            problemUI.checkAnswer(text);
+            if (problemUI.incorrect.length === 0) {
+                hint.style.background = '#6bdb6b';
+                hint.innerText = 'correct';
+                problemUI.resultPanel.style.visibility = 'hidden';
+            } else {
+                hint.style.background = '#ff6666';
+                hint.innerText = 'incorrect';
+                problemUI.resultText.innerText = problemUI.incorrect.join('');
+                problemUI.resultPanel.style.visibility = 'visible';
+            }
+            hint.style.visibility = 'visible';
+            startGame();
         }
-        hint.style.visibility = 'visible';
-        startGame();
     } else {
         if (problemUI.index !== problemUI.content.length) {
             let text = problemUI.getInputText();
