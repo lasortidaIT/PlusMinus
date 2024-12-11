@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'general',
     'day_problem',
     'default_game',
-    'loging'
+    'loging',
+    'profile_app',
 ]
 
 MIDDLEWARE = [
