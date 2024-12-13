@@ -19,9 +19,11 @@
         </div>
         <div class="login-area">
             <h1>Log In</h1>
+            <form action="" method="POST">
+            {% csrf_token %}
             <div class="login-panel">
-                <input type="text" placeholder="username" maxlength="30">
-                <input type="password" placeholder="password">
+                <input type="text" name="username" placeholder="username" maxlength="30">
+                <input type="password" name="password" placeholder="password">
                 <div class="social-auth">
                     <h3>Use:</h3>
                     <button class="google">
@@ -30,7 +32,8 @@
                     </button>
                 </div>
             </div>
-            <button>Log In</button>
+            <input class="button" type="submit" value="login" />
+            </form>
         </div>
         <div class="bottom-panel">
             <a href="./signup"><button>I don't have an account</button></a>
